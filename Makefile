@@ -34,7 +34,7 @@ dockerserve:
 # Use this command to inspect the container, run management commands,
 # or run anything else on the Django container
 dockershell:
-	docker compose -f $(DOCKER_CONFIG) run --rm django /bin/bash
+	docker compose -f $(DOCKER_CONFIG) exec --rm django /bin/bash
 
 # Build and deploy the production container
 deploy:
